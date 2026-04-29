@@ -1,0 +1,12 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Sensor noise and perception artifacts in simulated vs. real environments}}{4}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Deterministic simulation behavior vs. stochastic real-world conditions}}{5}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Comparison of occupancy grid maps and height maps for terrain representation}}{8}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Artificial Potential Field concept showing attractive and repulsive forces}}{9}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Control theory framework translating commands to actuator signals}}{10}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Open-loop control (blind) vs. closed-loop control (feedback-based)}}{11}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Stable vs. unstable controller behavior over time}}{12}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Pure Pursuit algorithm geometry showing lookahead point and circular arc}}{12}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Adaptive Pure Pursuit adjusting lookahead distance based on velocity}}{13}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces LiDAR (active sensing) vs. Camera (passive sensing) comparison}}{15}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Monocular (single) vs. Stereo (dual) camera depth estimation}}{16}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces ArUco marker detection and 6D pose estimation for robotic applications}}{17}{figure.12}%

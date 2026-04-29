@@ -1,0 +1,30 @@
+[0.582s] Invoking command in '/home/saif/Desktop/ROARTASK/ros2_ws/src/aruco_tracking': PYTHONPATH=/home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aruco_tracking build --build-base /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build install --record /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/install.log --single-version-externally-managed install_data
+[0.734s] /home/saif/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
+[0.734s]   warnings.warn(msg)
+[0.817s] running egg_info
+[0.830s] writing ../../build/aruco_tracking/aruco_tracking.egg-info/PKG-INFO
+[0.830s] writing dependency_links to ../../build/aruco_tracking/aruco_tracking.egg-info/dependency_links.txt
+[0.831s] writing entry points to ../../build/aruco_tracking/aruco_tracking.egg-info/entry_points.txt
+[0.831s] writing requirements to ../../build/aruco_tracking/aruco_tracking.egg-info/requires.txt
+[0.831s] writing top-level names to ../../build/aruco_tracking/aruco_tracking.egg-info/top_level.txt
+[0.987s] reading manifest file '../../build/aruco_tracking/aruco_tracking.egg-info/SOURCES.txt'
+[0.988s] writing manifest file '../../build/aruco_tracking/aruco_tracking.egg-info/SOURCES.txt'
+[0.988s] running build
+[0.988s] running build_py
+[0.988s] copying aruco_tracking/aruco_node.py -> /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking
+[0.988s] copying aruco_tracking/aruco_tracker.py -> /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking
+[0.988s] copying aruco_tracking/fake_camera.py -> /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking
+[0.988s] copying aruco_tracking/__init__.py -> /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking
+[0.989s] running install
+[0.992s] running install_lib
+[1.006s] running install_data
+[1.006s] copying resource/aruco_tracking -> /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/share/ament_index/resource_index/packages
+[1.006s] copying package.xml -> /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/share/aruco_tracking
+[1.007s] running install_egg_info
+[1.021s] removing '/home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages/aruco_tracking-0.0.0-py3.10.egg-info' (and everything under it)
+[1.022s] Copying ../../build/aruco_tracking/aruco_tracking.egg-info to /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages/aruco_tracking-0.0.0-py3.10.egg-info
+[1.022s] running install_scripts
+[1.059s] Installing aruco_node script to /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/aruco_tracking
+[1.059s] Installing fake_camera script to /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/aruco_tracking
+[1.060s] writing list of installed files to '/home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/install.log'
+[1.089s] Invoked command in '/home/saif/Desktop/ROARTASK/ros2_ws/src/aruco_tracking' returned '0': PYTHONPATH=/home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aruco_tracking build --build-base /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build install --record /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/install.log --single-version-externally-managed install_data

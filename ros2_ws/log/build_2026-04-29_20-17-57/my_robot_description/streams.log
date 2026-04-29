@@ -1,0 +1,57 @@
+[0.225s] Invoking command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saif/Desktop/RosData/ros2_prog1/install/my_py_pkg1:/opt/ros/humble /usr/bin/cmake /home/saif/Desktop/ROARTASK/ros2_ws/src/my_robot_description -DCMAKE_INSTALL_PREFIX=/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description
+[0.286s] -- The C compiler identification is GNU 11.4.0
+[0.349s] -- The CXX compiler identification is GNU 11.4.0
+[0.360s] -- Detecting C compiler ABI info
+[0.425s] -- Detecting C compiler ABI info - done
+[0.431s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.432s] -- Detecting C compile features
+[0.432s] -- Detecting C compile features - done
+[0.435s] -- Detecting CXX compiler ABI info
+[0.518s] -- Detecting CXX compiler ABI info - done
+[0.526s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[0.526s] -- Detecting CXX compile features
+[0.527s] -- Detecting CXX compile features - done
+[0.532s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.988s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.113s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.219s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.220s] -- Added test 'lint_cmake' to check CMake code style
+[1.221s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.224s] -- Added test 'xmllint' to check XML markup files
+[1.225s] -- Configuring done
+[1.230s] -- Generating done
+[1.232s] -- Build files have been written to: /home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_description
+[1.238s] Invoked command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saif/Desktop/RosData/ros2_prog1/install/my_py_pkg1:/opt/ros/humble /usr/bin/cmake /home/saif/Desktop/ROARTASK/ros2_ws/src/my_robot_description -DCMAKE_INSTALL_PREFIX=/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description
+[1.240s] Invoking command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saif/Desktop/RosData/ros2_prog1/install/my_py_pkg1:/opt/ros/humble /usr/bin/cmake --build /home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_description -- -j16 -l16
+[1.291s] Invoked command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saif/Desktop/RosData/ros2_prog1/install/my_py_pkg1:/opt/ros/humble /usr/bin/cmake --build /home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_description -- -j16 -l16
+[1.293s] Invoking command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saif/Desktop/RosData/ros2_prog1/install/my_py_pkg1:/opt/ros/humble /usr/bin/cmake --install /home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_description
+[1.303s] -- Install configuration: ""
+[1.304s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/urdf
+[1.306s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/urdf/macros.xacro
+[1.307s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/urdf/my_robot.urdf.xacro
+[1.307s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/urdf/gazebo.xacro
+[1.308s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/urdf/materials.xacro
+[1.308s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/launch
+[1.308s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/launch/display.launch.py
+[1.308s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/launch/gazebo_with_teleop.launch.py
+[1.308s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/launch/gazebo.launch.py
+[1.308s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/rviz
+[1.309s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/rviz/robot_view.rviz
+[1.309s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/worlds
+[1.309s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/worlds/empty_with_sensors.sdf
+[1.309s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/ament_index/resource_index/package_run_dependencies/my_robot_description
+[1.309s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/ament_index/resource_index/parent_prefix_path/my_robot_description
+[1.310s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.sh
+[1.310s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.dsv
+[1.310s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/environment/path.sh
+[1.310s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/environment/path.dsv
+[1.311s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/local_setup.bash
+[1.311s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/local_setup.sh
+[1.311s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/local_setup.zsh
+[1.311s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/local_setup.dsv
+[1.311s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/package.dsv
+[1.312s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/ament_index/resource_index/packages/my_robot_description
+[1.312s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig.cmake
+[1.312s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig-version.cmake
+[1.312s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_description/share/my_robot_description/package.xml
+[1.334s] Invoked command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saif/Desktop/RosData/ros2_prog1/install/my_py_pkg1:/opt/ros/humble /usr/bin/cmake --install /home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_description

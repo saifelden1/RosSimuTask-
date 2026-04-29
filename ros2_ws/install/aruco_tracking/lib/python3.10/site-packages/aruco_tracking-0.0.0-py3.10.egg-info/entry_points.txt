@@ -1,0 +1,3 @@
+[console_scripts]
+aruco_node = aruco_tracking.aruco_node:main
+fake_camera = aruco_tracking.fake_camera:main

@@ -1,0 +1,10 @@
+# Kiro IDE files
+.kiro/
+
+# VSCode settings
+.vscode/
+
+# ROAR-26 task files
+ROAR26-SOLO-MISSION-SIMULATION-AND-TESTING-master/
+
+videos/VideoWithSound.mp4

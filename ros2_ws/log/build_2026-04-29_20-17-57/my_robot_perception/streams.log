@@ -1,0 +1,43 @@
+[0.225s] Invoking command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_perception': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saif/Desktop/RosData/ros2_prog1/install/my_py_pkg1:/opt/ros/humble /usr/bin/cmake /home/saif/Desktop/ROARTASK/ros2_ws/src/my_robot_perception -DCMAKE_INSTALL_PREFIX=/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception
+[0.284s] -- The C compiler identification is GNU 11.4.0
+[0.350s] -- The CXX compiler identification is GNU 11.4.0
+[0.361s] -- Detecting C compiler ABI info
+[0.431s] -- Detecting C compiler ABI info - done
+[0.436s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.436s] -- Detecting C compile features
+[0.437s] -- Detecting C compile features - done
+[0.440s] -- Detecting CXX compiler ABI info
+[0.527s] -- Detecting CXX compiler ABI info - done
+[0.535s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[0.535s] -- Detecting CXX compile features
+[0.536s] -- Detecting CXX compile features - done
+[0.539s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.980s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.109s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.207s] -- Added test 'lint_cmake' to check CMake code style
+[1.209s] -- Added test 'xmllint' to check XML markup files
+[1.210s] -- Configuring done
+[1.214s] -- Generating done
+[1.216s] -- Build files have been written to: /home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_perception
+[1.225s] Invoked command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_perception' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saif/Desktop/RosData/ros2_prog1/install/my_py_pkg1:/opt/ros/humble /usr/bin/cmake /home/saif/Desktop/ROARTASK/ros2_ws/src/my_robot_perception -DCMAKE_INSTALL_PREFIX=/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception
+[1.227s] Invoking command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_perception': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saif/Desktop/RosData/ros2_prog1/install/my_py_pkg1:/opt/ros/humble /usr/bin/cmake --build /home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_perception -- -j16 -l16
+[1.275s] Invoked command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_perception' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saif/Desktop/RosData/ros2_prog1/install/my_py_pkg1:/opt/ros/humble /usr/bin/cmake --build /home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_perception -- -j16 -l16
+[1.279s] Invoking command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_perception': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saif/Desktop/RosData/ros2_prog1/install/my_py_pkg1:/opt/ros/humble /usr/bin/cmake --install /home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_perception
+[1.290s] -- Install configuration: ""
+[1.290s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/launch
+[1.290s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/ament_index/resource_index/package_run_dependencies/my_robot_perception
+[1.290s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/ament_index/resource_index/parent_prefix_path/my_robot_perception
+[1.290s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/environment/ament_prefix_path.sh
+[1.291s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/environment/ament_prefix_path.dsv
+[1.291s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/environment/path.sh
+[1.291s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/environment/path.dsv
+[1.291s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/local_setup.bash
+[1.292s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/local_setup.sh
+[1.292s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/local_setup.zsh
+[1.292s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/local_setup.dsv
+[1.292s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/package.dsv
+[1.292s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/ament_index/resource_index/packages/my_robot_perception
+[1.292s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/cmake/my_robot_perceptionConfig.cmake
+[1.292s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/cmake/my_robot_perceptionConfig-version.cmake
+[1.292s] -- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/package.xml
+[1.315s] Invoked command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_perception' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saif/Desktop/RosData/ros2_prog1/install/my_py_pkg1:/opt/ros/humble /usr/bin/cmake --install /home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_perception

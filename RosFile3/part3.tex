@@ -1,0 +1,364 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning}
+\usepackage{xcolor}
+
+% Define colors
+\definecolor{sectioncolor}{RGB}{139,0,0}
+\definecolor{subsectioncolor}{RGB}{220,20,60}
+
+% Header and Footer Setup
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{ROAR Solo Mission}
+\fancyhead[R]{Part 3 Submission}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\headheight}{14.5pt}
+
+% Prevent bad page breaks
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+
+% Title formatting
+\titleformat{\section}
+  {\normalfont\LARGE\bfseries\color{sectioncolor}}
+  {\thesection}{1em}{}
+  [\vspace{-0.5em}\textcolor{sectioncolor}{\titlerule[1.5pt]}\vspace{0.2em}]
+
+\titleformat{\subsection}
+  {\normalfont\Large\bfseries\color{subsectioncolor}}
+  {\thesubsection}{1em}{}
+  
+\titlespacing*{\subsection}{0pt}{1em}{0.3em}
+\titlespacing*{\section}{0pt}{1.5em}{0.5em}
+
+\begin{document}
+
+% Cover Page
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Huge\bfseries ROAR Solo Mission}\\[0.5cm]
+    {\LARGE Technical Documentation}\\[0.5cm]
+    {\LARGE Part 3 - Case Study}\\[3cm]
+    
+    \vfill
+    
+    {\Large Prepared by:}\\[0.5cm]
+    {\large Saif Elden Mahmoud}\\[3cm]
+    
+    {\Large Date:}\\[0.5cm]
+    {\large \today}
+    
+    \vfill
+    
+\end{titlepage}
+
+% Table of Contents
+\tableofcontents
+\newpage
+
+% Start of main content
+\section{System Verification and Validation}
+
+\subsection{Q1: Difference between Verification and Validation}
+
+In the context of autonomous systems, verification and validation (V\&V) are complementary processes used to ensure system reliability, safety, and operational success, but they address fundamentally different questions.
+
+\noindent\textbf{Verification: \textit{"Did we build the system right?"}}
+
+Verification evaluates whether a system or component meets its specified technical requirements, design constraints, and mathematical models. It focuses on the internal correctness of the software and hardware architecture.
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Example in ASU ROAR:} Verifying the \textit{Communication Layer} by testing if the micro-ROS bridge successfully serializes DDS messages over UART to the STM32 microcontroller with a deterministic, bounded latency. Another example is confirming through software-in-the-loop tests that the \textit{A* Global Planner} safely traverses an occupancy grid without memory leaks or math errors.
+\end{itemize}
+
+\noindent\textbf{Validation: \textit{"Did we build the right system?"}}
+
+Validation evaluates whether the completed system fulfills its intended operational goals and user needs when placed in the real-world environment. It focuses on end-to-end mission success under actual or highly realistic conditions.
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Example in ASU ROAR:} Validating the \textit{Perception and Localization Subsystems} by deploying the rover on the outdoor Marsyard mockup under actual "Direct Sun Glare" and "Rapidly Changing Shadows." This proves whether the ArUco Marker Detection and Fuzz-IESKF can successfully locate the three probes needed for the Probing task under the exact environmental conditions of the European Rover Challenge.
+\end{itemize}
+
+\vspace{0.3em}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.3em}
+
+\subsection{Q2: Key Limitations and Failure Conditions of Major Modules}
+
+Based on the ASU ROAR architecture and the Marsyard environment, here are the key limitations for each major subsystem:
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Perception Subsystem} 
+    \begin{itemize}
+        \item \textit{Limitation:} Relies heavily on visual clarity for the RGB-D camera and LiDAR.
+        \item \textit{Failure Condition:} ``Direct sun glare'' and ``rapidly changing shadows'' can wash out the camera image, causing ArUco marker detection and visual odometry to fail. Additionally, dust or rain can block sensors and create ghost artifacts in the LiDAR point cloud, leading to false obstacle detection.
+    \end{itemize}
+
+    \item \textbf{Localization Subsystem}
+    \begin{itemize}
+        \item \textit{Limitation:} Depends on consistent traction and stable sensor readings to accurately fuse data via the Fuzz-IESKF.
+        \item \textit{Failure Condition:} Operating on ``loose gravel'' or ``sandy soil'' causes wheel slippage, which makes the wheel encoder odometry highly inaccurate. Furthermore, ``temperature extremes'' (ranging from 8$^\circ$C to 28$^\circ$C) throughout the day can cause IMU thermal drift, leading to accumulated position errors over time.
+    \end{itemize}
+
+    \item \textbf{Path Planning Subsystem}
+    \begin{itemize}
+        \item \textit{Limitation:} The Local Planner uses Artificial Potential Fields (APF) to dynamically dodge obstacles, which interacts with the Global (A*) Planner.
+        \item \textit{Failure Condition:} In complex ``irregular rock fields,'' APF is notoriously prone to getting stuck in ``local minima'' (e.g., driving into a U-shaped rock arrangement) where the repulsive forces of the obstacles trap the rover and prevent it from moving forward.
+    \end{itemize}
+
+    \item \textbf{Control Subsystem}
+    \begin{itemize}
+        \item \textit{Limitation:} Translates planned paths to physical motor movements, assuming the rover has adequate power and ground grip.
+        \item \textit{Failure Condition:} On ``steep slopes'' or soft terrain, the Adaptive Pure Pursuit controller might fail to track the path accurately due to poor traction, causing the rover to slide or oversteer. Additionally, ``low temperatures'' can degrade battery performance, resulting in voltage drops that reduce the motor torque needed to climb over step obstacles.
+    \end{itemize}
+\end{enumerate}
+
+\vspace{0.3em}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.3em}
+
+\subsection{Q3: Environmental Challenges and Corner Cases}
+
+Operating the ASU ROAR rover in an uncontrolled outdoor environment like the Marsyard introduces unpredictable physical variables. These factors can combine to push the system into ``corner cases''—rare, extreme situations that are difficult to anticipate and test for in normal simulations.
+
+\noindent\textbf{Visibility and Lighting Constraints}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Challenge:} The environment includes direct sun glare, moving shadows, and low-contrast overcast lighting.
+    \item \textit{Corner Case Production:} If the rover turns directly toward the sun, the RGB-D camera might get completely washed out by glare, causing it to lose sight of an ArUco marker. If at the exact same moment a dark shadow is cast over the path, the LiDAR or camera might misclassify the shadow as a solid drop-off or rock, freezing the rover in place while its main localization reference (the marker) is lost.
+\end{itemize}
+
+\noindent\textbf{Terrain Variability}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Challenge:} The Marsyard features steep slopes, loose gravel, soft sand, and unpredictable rock distributions.
+    \item \textit{Corner Case Production:} When trying to climb a steep slope covered in loose gravel, the wheels can lose traction and spin in place. The wheel encoders will falsely report rapid forward movement, while the IMU and visual odometry correctly report zero movement. This massive mismatch in sensor data can confuse the Fuzz-IESKF fusion algorithm, causing the localization to drift violently and resulting in the rover driving off the reference path.
+\end{itemize}
+
+\noindent\textbf{Weather and Temperature Extremes}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Challenge:} Autumn weather in Poland brings sudden rain, dust, and huge temperature swings (8$^\circ$C to 28$^\circ$C).
+    \item \textit{Corner Case Production:} A sudden gust of wind kicking up dust can create ``ghost'' points in the LiDAR data, making it seem like the rover is surrounded by walls. Coupled with a low early-morning temperature (8$^\circ$C) that naturally degrades battery voltage, the rover's motors might struggle to perform the sharp evasive maneuvers commanded by the Local Planner, potentially leading to a system brownout or stall.
+\end{itemize}
+
+\vspace{0.3em}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.3em}
+
+\subsection{Q4: Targeted Simulation Test Scenarios}
+
+Building on the corner cases identified in Q3, here are specific simulation scenarios designed to stress-test the system:
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Scenario 1: Solar Glare and Shadow Trap}
+    \begin{itemize}
+        \item \textit{Subsystem Stressed:} Perception Subsystem.
+        \item \textit{Simulated Conditions:} A directional, high-intensity light source is angled directly into the simulated camera to overexpose (``wash out'') the image. Simultaneously, sharp, high-contrast shadows are cast across the rover's immediate path.
+        \item \textit{Assumption/Failure Mode Probed:} Tests the assumption that the rover always has clean visual data. It probes whether the obstacle detection pipeline will falsely classify dark shadows as physical drop-offs or rocks when camera feedback is blinded and ArUco markers are lost.
+    \end{itemize}
+
+    \item \textbf{Scenario 2: Traction Loss on Steep Sloped Gravel}
+    \begin{itemize}
+        \item \textit{Subsystem Stressed:} Localization Subsystem (Fuzz-IESKF).
+        \item \textit{Simulated Conditions:} The rover is placed on a $20^\circ$ incline with a severely reduced friction coefficient. Wheel joints are forced to spin significantly faster than the actual rover body moves, simulating extreme slip.
+        \item \textit{Assumption/Failure Mode Probed:} Tests the assumption that wheel rotation directly translates to forward movement. This probes the fusion algorithm's ability to dynamically lower its trust in the wheel encoders and rely more on the IMU when sensors brazenly contradict each other.
+    \end{itemize}
+
+    \item \textbf{Scenario 3: Dust Storm and Cold Battery Brownout}
+    \begin{itemize}
+        \item \textit{Subsystem Stressed:} Control and Path Planning Subsystems.
+        \item \textit{Simulated Conditions:} Random, clustered noise (``ghost points'') is actively injected into the simulated LiDAR point cloud to mimic blowing dust. Concurrently, an artificial torque limit is applied to the wheel motors to simulate a voltage drop from a cold ($8^\circ$C) battery.
+        \item \textit{Assumption/Failure Mode Probed:} Tests the assumption that the rover has full power capabilities when avoiding sudden obstacles. It probes whether the Local Planner (APF) will freeze completely due to ghost noise, or if the weakened motors will cause a stall during a sharp evasive maneuver.
+    \end{itemize}
+\end{enumerate}
+
+\vspace{0.3em}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.3em}
+
+
+\subsection{Q5: Stress Testing and Performance Indicators}
+
+Stress testing involves intentionally overloading the system's inputs or environment to find its breaking point. Below is how I would stress test each module of the ASU ROAR rover and the signals I would monitor:
+
+\noindent\textbf{1. Perception Subsystem}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Stress Test:} Progressively degrade the intake data. I would incrementally increase camera blur, overexposure, and LiDAR frame dropping rates during a simulation run until the system goes completely blind.
+    \item \textit{Indicators to Monitor:} ArUco marker detection confidence scores, the rate of false positive/negative obstacle detections, and the processing frame rate (checking for CPU bottlenecks causing lag).
+\end{itemize}
+
+\noindent\textbf{2. Localization Subsystem}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Stress Test:} Create a "sensor starvation" scenario. I would rapidly inject severe IMU noise, spin the wheels on simulated ice, and suddenly block the camera to completely kill visual odometry.
+    \item \textit{Indicators to Monitor:} The size of the covariance matrix from the Fuzz-IESKF (which shows the system's uncertainty), the position drift rate compared to the simulation's ground truth, and filter divergence warnings.
+\end{itemize}
+
+\noindent\textbf{3. Path Planning Subsystem}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Stress Test:} Flood the environment with dynamic obstacles. I would spawn dozens of moving obstacles moving randomly across a narrow corridor to overwhelm the APF local planner and A* global planner.
+    \item \textit{Indicators to Monitor:} Path computation time (to see if the algorithm misses its real-time deadlines), frequency of rapid re-planning, and occurrences of "local minima" traps where the rover oscillates helplessly.
+\end{itemize}
+
+\noindent\textbf{4. Control Subsystem}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Stress Test:} Command impossibly aggressive maneuvers. I would feed the Pure Pursuit controller a high-speed, zig-zag path on uneven terrain and artificially introduce a 200ms communication delay over the micro-ROS bridge.
+    \item \textit{Indicators to Monitor:} Cross-track error (how far the rover physically deviates from the mathematical path line), actuator saturation (motors staying at 100\% torque constantly), and control loop latency spikes.
+\end{itemize}
+
+\vspace{0.3em}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.3em}
+
+
+
+
+\subsection{Q5: Stress Testing and Performance Indicators}
+
+Stress testing involves intentionally overloading the system's inputs or environment to find its breaking point. Below is how I would stress test each module of the ASU ROAR rover and the signals I would monitor:
+
+\noindent\textbf{1. Perception Subsystem}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Stress Test:} Progressively degrade the intake data. I would incrementally increase camera blur, overexposure, and LiDAR frame dropping rates during a simulation run until the system goes completely blind.
+    \item \textit{Indicators to Monitor:} ArUco marker detection confidence scores, the rate of false positive/negative obstacle detections, and the processing frame rate (checking for CPU bottlenecks causing lag).
+\end{itemize}
+
+\noindent\textbf{2. Localization Subsystem}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Stress Test:} Create a "sensor starvation" scenario. I would rapidly inject severe IMU noise, spin the wheels on simulated ice, and suddenly block the camera to completely kill visual odometry.
+    \item \textit{Indicators to Monitor:} The size of the covariance matrix from the Fuzz-IESKF (which shows the system's uncertainty), the position drift rate compared to the simulation's ground truth, and filter divergence warnings.
+\end{itemize}
+
+\noindent\textbf{3. Path Planning Subsystem}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Stress Test:} Flood the environment with dynamic obstacles. I would spawn dozens of moving obstacles moving randomly across a narrow corridor to overwhelm the APF local planner and A* global planner.
+    \item \textit{Indicators to Monitor:} Path computation time (to see if the algorithm misses its real-time deadlines), frequency of rapid re-planning, and occurrences of "local minima" traps where the rover oscillates helplessly.
+\end{itemize}
+
+\noindent\textbf{4. Control Subsystem}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Stress Test:} Command impossibly aggressive maneuvers. I would feed the Pure Pursuit controller a high-speed, zig-zag path on uneven terrain and artificially introduce a 200ms communication delay over the micro-ROS bridge.
+    \item \textit{Indicators to Monitor:} Cross-track error (how far the rover physically deviates from the mathematical path line), actuator saturation (motors staying at 100\% torque constantly), and control loop latency spikes.
+\end{itemize}
+
+\vspace{0.3em}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.3em}
+
+
+
+
+\subsection{Q5: Stress Testing and Performance Indicators}
+
+Stress testing involves intentionally overloading the system's inputs or environment to find its breaking point. Below is how I would stress test each module of the ASU ROAR rover and the signals I would monitor:
+
+\noindent\textbf{1. Perception Subsystem}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Stress Test:} Progressively degrade the intake data. I would incrementally increase camera blur, overexposure, and LiDAR frame dropping rates during a simulation run until the system goes completely blind.
+    \item \textit{Indicators to Monitor:} ArUco marker detection confidence scores, the rate of false positive/negative obstacle detections, and the processing frame rate (checking for CPU bottlenecks causing lag).
+\end{itemize}
+
+\noindent\textbf{2. Localization Subsystem}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Stress Test:} Create a "sensor starvation" scenario. I would rapidly inject severe IMU noise, spin the wheels on simulated ice, and suddenly block the camera to completely kill visual odometry.
+    \item \textit{Indicators to Monitor:} The size of the covariance matrix from the Fuzz-IESKF (which shows the system's uncertainty), the position drift rate compared to the simulation's ground truth, and filter divergence warnings.
+\end{itemize}
+
+\noindent\textbf{3. Path Planning Subsystem}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Stress Test:} Flood the environment with dynamic obstacles. I would spawn dozens of moving obstacles moving randomly across a narrow corridor to overwhelm the APF local planner and A* global planner.
+    \item \textit{Indicators to Monitor:} Path computation time (to see if the algorithm misses its real-time deadlines), frequency of rapid re-planning, and occurrences of "local minima" traps where the rover oscillates helplessly.
+\end{itemize}
+
+\noindent\textbf{4. Control Subsystem}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Stress Test:} Command impossibly aggressive maneuvers. I would feed the Pure Pursuit controller a high-speed, zig-zag path on uneven terrain and artificially introduce a 200ms communication delay over the micro-ROS bridge.
+    \item \textit{Indicators to Monitor:} Cross-track error (how far the rover physically deviates from the mathematical path line), actuator saturation (motors staying at 100\% torque constantly), and control loop latency spikes.
+\end{itemize}
+
+\vspace{0.3em}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.3em}
+
+
+\subsection{Q6: Benchmarking Strategy for Evaluation}
+
+To ensure the ASU ROAR rover improves with every software update, a structured benchmarking strategy is required to evaluate performance consistently across multiple test runs and software versions.
+
+\noindent\textbf{1. Test Structure}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Regression Scenarios:} Create a standardized library of Gazebo simulation scenarios covering regular operations (e.g., standard navigation) and specific corner cases (like the "Treadmill Slip Test").
+    \item \textit{Automation:} Use Continuous Integration (CI) tools to automatically run this entire test suite every time a new code commit is pushed to the repository.
+\end{itemize}
+
+\noindent\textbf{2. Data Storage}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Bag Files:} Record all topic telemetry (sensor data, odometry, actuator commands) during each run using ROS 2 \texttt{rosbag}. This allows offline replay and deep inspection after the test concludes.
+    \item \textit{Metric Logging:} Extract key performance indicators (KPIs)---such as maximum cross-track error, average CPU load, marker detection success rate, and total mission time---and log them into a structured database (like a CSV file or time-series database).
+\end{itemize}
+
+\noindent\textbf{3. Performance Comparison}
+\begin{itemize}[leftmargin=*]
+    \item \textit{Baseline Referencing:} Establish a "baseline" metric profile from a known stable software version.
+    \item \textit{Automated Reporting:} After the CI pipeline finishes a test run, generate a dashboard report comparing the new KPIs against the baseline. If an update causes a subsystem to degrade (e.g., the new localization algorithm drifts 10\% more than the previous version), the team is alerted to rollback or fix the issue.
+\end{itemize}
+
+\vspace{0.3em}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.3em}
+
+
+\subsection{Q7: Quantitative Metrics for System Modules}
+
+To objectively measure the ASU ROAR rover's performance, specific quantitative metrics must be defined for each major subsystem.
+
+\noindent\textbf{1. Perception Subsystem: Detection Recall}
+\begin{itemize}[leftmargin=*]
+    \item \textit{What it measures:} The percentage of actual ArUco markers correctly identified by the camera pipeline out of all visible markers.
+    \item \textit{How it is measured in simulation:} By comparing the Perception node's published marker poses against Gazebo's known ground truth object states.
+    \item \textit{Acceptable threshold:} $>90\%$ recall under normal lighting, and $>75\%$ under harsh simulated conditions (e.g., glare or shadows).
+    \item \textit{Tracking over time:} Logged per Continuous Integration (CI) test run in a database, immediately alerting the team if an imaging code update drops the recall rate below the baseline.
+\end{itemize}
+
+\noindent\textbf{2. Localization Subsystem: Position RMSE (Root Mean Square Error)}
+\begin{itemize}[leftmargin=*]
+    \item \textit{What it measures:} The average deviation between the rover's estimated position (calculated by the Fuzz-IESKF) and its actual physical location.
+    \item \textit{How it is measured in simulation:} By continuously logging the difference between the computed \texttt{/odom} topic and the Gazebo \texttt{/ground\_truth} topic during a route.
+    \item \textit{Acceptable threshold:} RMSE $< 0.15$ meters to ensure the rover remains safe within tight corridors.
+    \item \textit{Tracking over time:} Plotted over time on a CI dashboard. An increasing RMSE across versions would clearly indicate that a change in sensor fusion logic is causing drift.
+\end{itemize}
+
+\noindent\textbf{3. Path Planning Subsystem: Planning Latency}
+\begin{itemize}[leftmargin=*]
+    \item \textit{What it measures:} The time it takes the Local Planner (APF) to compute a new evasive maneuver after a new obstacle is detected.
+    \item \textit{How it is measured in simulation:} By measuring the timestamp delta between a fresh LiDAR point cloud message arriving and the corresponding new velocity command (\texttt{cmd\_vel}) being published.
+    \item \textit{Acceptable threshold:} Latency $< 50$ milliseconds to guarantee real-time, high-speed responsiveness.
+    \item \textit{Tracking over time:} Tracked using ROS 2 profiling tools within the automated test pipeline to pinpoint if a new, more complex algorithm is causing CPU bottlenecks.
+\end{itemize}
+
+\noindent\textbf{4. Control Subsystem: Cross-Track Error (CTE)}
+\begin{itemize}[leftmargin=*]
+    \item \textit{What it measures:} The shortest lateral distance between the rover's actual driven path and the ideal mathematical reference path planned by A*.
+    \item \textit{How it is measured in simulation:} Calculated dynamically by recording the rover's trajectory and comparing its orthogonal distance to the predefined route.
+    \item \textit{Acceptable threshold:} Maximum CTE $< 0.2$ meters, proving the rover will not accidentally scrape against path boundaries.
+    \item \textit{Tracking over time:} The maximum and average CTE across standard regression routes are stored and graphed alongside version numbers to ensure the Pure Pursuit controller tuning remains stable.
+\end{itemize}
+
+\vspace{0.3em}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{0.3em}
+
+\end{document}

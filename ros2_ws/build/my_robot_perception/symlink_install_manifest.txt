@@ -1,0 +1,16 @@
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/launch/aruco_detection.launch.py
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/ament_index/resource_index/package_run_dependencies/my_robot_perception
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/ament_index/resource_index/parent_prefix_path/my_robot_perception
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/environment/ament_prefix_path.sh
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/environment/ament_prefix_path.dsv
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/environment/path.sh
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/environment/path.dsv
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/local_setup.bash
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/local_setup.sh
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/local_setup.zsh
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/local_setup.dsv
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/package.dsv
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/ament_index/resource_index/packages/my_robot_perception
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/cmake/my_robot_perceptionConfig.cmake
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/cmake/my_robot_perceptionConfig-version.cmake
+/home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_perception/share/my_robot_perception/package.xml

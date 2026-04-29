@@ -1,0 +1,81 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/lib/ccache/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saif/Desktop/ROARTASK/ros2_ws/build/my_robot_gazebo
+-- Install configuration: ""
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/worlds
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/worlds/marker_world.world
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole51
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole51/model.sdf
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole51/meshes
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole51/meshes/pole51.dae
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole51/meshes/pole51.stl
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole51/meshes/15.png
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole51/model.config
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole52
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole52/model.sdf
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole52/meshes
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole52/meshes/pole52.dae
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole52/meshes/14.png
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole52/meshes/pole52.stl
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole52/model.config
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole53
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole53/model.sdf
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole53/meshes
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole53/meshes/pole53.dae
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole53/meshes/13.png
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole53/meshes/pole53.daeZone.Identifier
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole53/meshes/pole53.stl
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole53/meshes/13.pngZone.Identifier
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole53/meshes/pole53.stlZone.Identifier
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole53/model.config
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole53/model.configZone.Identifier
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole53/model.sdfZone.Identifier
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole54
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole54/model.sdf
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole54/meshes
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole54/meshes/pole54.stl
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole54/meshes/pole54.dae
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole54/meshes/12.pngZone.Identifier
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole54/meshes/pole54.stlZone.Identifier
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole54/meshes/12.png
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole54/meshes/pole54.daeZone.Identifier
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole54/model.config
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole54/model.configZone.Identifier
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/models/pole54/model.sdfZone.Identifier
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/launch
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/launch/spawn_robot.launch.py
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/ament_index/resource_index/package_run_dependencies/my_robot_gazebo
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/ament_index/resource_index/parent_prefix_path/my_robot_gazebo
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/environment/ament_prefix_path.sh
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/environment/ament_prefix_path.dsv
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/environment/path.sh
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/environment/path.dsv
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/local_setup.bash
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/local_setup.sh
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/local_setup.zsh
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/local_setup.dsv
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/package.dsv
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/ament_index/resource_index/packages/my_robot_gazebo
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/cmake/my_robot_gazeboConfig.cmake
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/cmake/my_robot_gazeboConfig-version.cmake
+-- Installing: /home/saif/Desktop/ROARTASK/ros2_ws/install/my_robot_gazebo/share/my_robot_gazebo/package.xml

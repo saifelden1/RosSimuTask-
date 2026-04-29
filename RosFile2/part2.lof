@@ -1,0 +1,7 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Gazebo simulation with the robot spawned in the marker world and the teleop GUI used during runtime testing.}}{6}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Terminal verification showing active nodes, bridged topics, and ArUco marker detection output with ID 53.}}{7}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces TF tree exported from the running system after joint-state publication was restored.}}{7}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces RViz model view after the transform issue was fixed and the wheel frames resolved correctly.}}{8}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Integrated system overview showing topic checks, node activity, ArUco detection output, RViz, Gazebo, and the map context in one capture.}}{9}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Additional photos showcasing the working project.}}{9}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Additional photos showcasing the working project.}}{9}{figure.7}%

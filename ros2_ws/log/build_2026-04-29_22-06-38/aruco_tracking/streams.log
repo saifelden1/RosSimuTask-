@@ -1,0 +1,42 @@
+[0.666s] Invoking command in '/home/saif/Desktop/ROARTASK/ros2_ws/src/aruco_tracking': PYTHONPATH=/home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aruco_tracking build --build-base /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build install --record /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/install.log --single-version-externally-managed install_data
+[0.817s] /home/saif/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
+[0.817s]   warnings.warn(msg)
+[0.917s] running egg_info
+[0.934s] creating ../../build/aruco_tracking/aruco_tracking.egg-info
+[0.934s] writing ../../build/aruco_tracking/aruco_tracking.egg-info/PKG-INFO
+[0.934s] writing dependency_links to ../../build/aruco_tracking/aruco_tracking.egg-info/dependency_links.txt
+[0.934s] writing entry points to ../../build/aruco_tracking/aruco_tracking.egg-info/entry_points.txt
+[0.935s] writing requirements to ../../build/aruco_tracking/aruco_tracking.egg-info/requires.txt
+[0.935s] writing top-level names to ../../build/aruco_tracking/aruco_tracking.egg-info/top_level.txt
+[1.083s] writing manifest file '../../build/aruco_tracking/aruco_tracking.egg-info/SOURCES.txt'
+[1.117s] reading manifest file '../../build/aruco_tracking/aruco_tracking.egg-info/SOURCES.txt'
+[1.118s] writing manifest file '../../build/aruco_tracking/aruco_tracking.egg-info/SOURCES.txt'
+[1.118s] running build
+[1.118s] running build_py
+[1.118s] creating /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking
+[1.118s] copying aruco_tracking/aruco_node.py -> /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking
+[1.118s] copying aruco_tracking/aruco_tracker.py -> /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking
+[1.119s] copying aruco_tracking/fake_camera.py -> /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking
+[1.119s] copying aruco_tracking/__init__.py -> /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking
+[1.119s] running install
+[1.123s] running install_lib
+[1.140s] creating /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages/aruco_tracking
+[1.140s] copying /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking/aruco_node.py -> /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages/aruco_tracking
+[1.140s] copying /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking/aruco_tracker.py -> /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages/aruco_tracking
+[1.140s] copying /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking/fake_camera.py -> /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages/aruco_tracking
+[1.140s] copying /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build/lib/aruco_tracking/__init__.py -> /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages/aruco_tracking
+[1.141s] byte-compiling /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages/aruco_tracking/aruco_node.py to aruco_node.cpython-310.pyc
+[1.142s] byte-compiling /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages/aruco_tracking/aruco_tracker.py to aruco_tracker.cpython-310.pyc
+[1.142s] byte-compiling /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages/aruco_tracking/fake_camera.py to fake_camera.cpython-310.pyc
+[1.143s] byte-compiling /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages/aruco_tracking/__init__.py to __init__.cpython-310.pyc
+[1.143s] running install_data
+[1.143s] creating /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/share/ament_index/resource_index/packages
+[1.143s] copying resource/aruco_tracking -> /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/share/ament_index/resource_index/packages
+[1.143s] copying package.xml -> /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/share/aruco_tracking
+[1.143s] running install_egg_info
+[1.161s] Copying ../../build/aruco_tracking/aruco_tracking.egg-info to /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages/aruco_tracking-0.0.0-py3.10.egg-info
+[1.162s] running install_scripts
+[1.205s] Installing aruco_node script to /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/aruco_tracking
+[1.206s] Installing fake_camera script to /home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/aruco_tracking
+[1.206s] writing list of installed files to '/home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/install.log'
+[1.245s] Invoked command in '/home/saif/Desktop/ROARTASK/ros2_ws/src/aruco_tracking' returned '0': PYTHONPATH=/home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aruco_tracking build --build-base /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build install --record /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/install.log --single-version-externally-managed install_data

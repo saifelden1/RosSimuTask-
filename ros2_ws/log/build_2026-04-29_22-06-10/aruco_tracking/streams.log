@@ -1,0 +1,10 @@
+[0.694s] Invoking command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking': PYTHONPATH=/home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build --no-deps symlink_data
+[0.850s] /home/saif/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
+[0.850s]   warnings.warn(msg)
+[0.898s] usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+[0.898s]    or: setup.py --help [cmd1 cmd2 ...]
+[0.898s]    or: setup.py --help-commands
+[0.898s]    or: setup.py cmd --help
+[0.898s] 
+[0.898s] error: option --editable not recognized
+[0.927s] Invoked command in '/home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking' returned '1': PYTHONPATH=/home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saif/Desktop/ROARTASK/ros2_ws/install/aruco_tracking/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/saif/Desktop/ROARTASK/ros2_ws/build/aruco_tracking/build --no-deps symlink_data
